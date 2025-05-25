@@ -1,0 +1,148 @@
+ /* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general y canvas */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  pointer-events: none;
+}
+
+/* Contenedor del chat */
+.chat-wrapper {
+  position: relative;
+  max-width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  position: relative;
+  overflow: visible;
+}
+
+/* Cabecera */
+.chat-header {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+/* Caja de mensajes */
+.chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Mensajes */
+.message {
+  max-width: 75%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 15px;
+  word-wrap: break-word;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.message.mine {
+  align-self: flex-end;
+  background-color: rgba(0, 150, 255, 0.6);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message.theirs {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-bottom-left-radius: 0;
+}
+
+/* Formulario */
+.chat-form {
+  display: flex;
+  padding: 0.75rem;
+  background-color: transparent;
+  gap: 0.5rem;
+}
+
+/* Inputs */
+.input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Botón de enviar */
+.send-btn {
+  background-color: rgba(9, 132, 227, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Ocultar input de nombre si se usa localStorage */
+
+.send-btn {
+  transition: transform 0.1s ease;
+}
+
+.send-btn:active {
+  transform: scale(0.92);
+}
+
+.usuarios-lista {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #00ff00;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+
+.emoji-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+emoji-picker {
+  z-index: 9999 !important;
+}
+

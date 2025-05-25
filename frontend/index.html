@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat de Piso</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<canvas id="matrix-background"></canvas>
+
+		<div class="chat-wrapper">
+			<div class="chat-header">
+				<h2>🌷Piso Chochito🌷</h2>
+			</div>
+			<div id="usuarios-lista" class="usuarios-lista"></div>
+
+			<div id="chat-box" class="chat-box"></div>
+
+			<form id="chat-form" class="chat-form">
+				<form id="chat-form" class="chat-form">
+					<button type="button" id="emoji-btn" class="emoji-btn">😊</button>
+					<input
+						type="text"
+						id="message"
+						placeholder="Escribe un mensaje..."
+						class="input"
+						autocomplete="off"
+					/>
+					<button type="submit" class="send-btn">➤</button>
+				</form>
+			</form>
+		</div>
+		<script
+			type="module"
+			src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"
+		></script>
+		<script type="module" src="js/main.js"></script>
+	</body>
+</html>

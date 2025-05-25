@@ -1,4 +1,4 @@
-# Chat LAN con RabbitMQ + FastAPI + Matrix Background
+# Chat LAN con RabbitMQ + FastAPI
 
 Este es un sistema de mensajería en red local con:
 
